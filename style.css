@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+:root {
+    --black: #000;
+    --primary-color: #000;
+    --secondary-color: #E5E5E5;
+}
+
+.dark-mode {
+    --bg-color: #111111ee;
+    --primary-color: #fff;
+    --secondary-color: #292929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+main {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+main>.container {
+    width: 85%;
+
+}
+
+/* Header styling */
+header {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header,
+footer {
+    z-index: 2;
+}
+
+header>.logo>a {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* expected-date styling */
+.expected-date {
+    position: fixed;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.expected-date>div {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.expected-date>h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 40px;
+}
+
+div>button {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+    /* transition: .3s; */
+    box-shadow: 0px 0px 2px #000;
+}
+
+div>button:hover {
+    box-shadow: 0px 0px 3px #000;
+}
+
+/* remaining-time-container styling */
+.remaining-time-container {
+    position: fixed;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    display: none;
+}
+
+.remaining-time-container h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+}
+
+.clock {
+    display: flex;
+    gap: 1rem;
+}
+
+.clock>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 120px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+}
+
+.clock .remaining-time {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.clock .title {
+    font-size: 14px;
+}
+
+.clock>div>b {
+    text-align: center;
+}
+
+/* From Uiverse.io by arghyaBiswasDev */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.2em;
+    height: 1.8em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    border: 1px solid #adb5bd;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 20px;
+    left: 0.27em;
+    bottom: 0.25em;
+    background-color: #fff;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #fff;
+}
+
+
+input:checked+.slider:before {
+    transform: translateX(1.4em);
+    background-color: #000;
+}
+
+/* images styling */
+.top-img,
+.bottom-img {
+    position: absolute;
+    opacity: 25%;
+    width: 60%;
+    z-index: -1;
+}
+
+body.dark-mode img {
+    filter: invert(20%) !important;
+    opacity: 100% !important;
+}
+
+.top-img {
+    top: 0px;
+}
+
+.bottom-img {
+    bottom: 0px;
+}
+
+/* footer */
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+}
+
+footer a {
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+    border: 1px solid var(--primary-color);
+    padding: 4px 6px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a:hover i {
+    color: darkblue;
+}
+
+/* for small-screen */
+@media only screen and (max-width: 550px) {
+    .clock {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .clock>div {
+        width: calc(50% - 10px);
+    }
+
+    .expected-date>h2 {
+        font-size: 28px;
+    }
+}
