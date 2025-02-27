@@ -242,6 +242,75 @@ footer a:hover i {
     color: darkblue;
 }
 
+.back-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+    gap: 1rem;
+}
+
+.back-btn>button {
+    flex: 1;
+}
+
+/* Ramadan Timing Calender styling*/
+.calender {
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.calender>h1 {
+    text-align: center;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.calender>table {
+    border-collapse: collapse;
+    overflow: auto;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    width: 98%;
+}
+
+.first-row {
+    position: sticky;
+    top: 0px;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+}
+
+table :is(th, td) {
+    border: 1px solid var(--primary-color);
+    padding: 4px 8px;
+    text-align: center;
+}
+
+
+/* scrollbar styling */
+.calender::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.calender::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+.calender::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #0000009b;
+}
+
 /* for small-screen */
 @media only screen and (max-width: 550px) {
     .clock {
@@ -255,5 +324,9 @@ footer a:hover i {
 
     .expected-date>h2 {
         font-size: 28px;
+    }
+
+    .back-btn {
+        flex-direction: column;
     }
 }

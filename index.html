@@ -30,8 +30,8 @@
             <div class="expected-date">
                 <h2>Expected Ramdan Date?</h2>
                 <div>
-                    <button onclick="onClickHandler()">28-February</button>
                     <button onclick="onClickHandler()">01-March</button>
+                    <button onclick="onClickHandler()">02-March</button>
                 </div>
             </div>
             <div class="remaining-time-container">
@@ -56,10 +56,35 @@
                         <div class="title">SECONDS</div>
                     </div>
                 </div>
+                <div class="back-btn">
+                    <button onclick="goBackBtnHandler()">Go Back <i class="fa-solid fa-backward"></i></button>
+                    <button onclick="showCalender()">Show Calender</button>
+                </div>
+            </div>
+            <div class="calender">
+                <table>
+                    <h1 id="displayDate">
+                        <span class="date"></span>
+                        <span class="time"></span>
+                    </h1>
+                    <tr class="first-row">
+                        <th>Day</th>
+                        <th>Iftari</th>
+                        <th>Sehri</th>
+                        <th>Date</th>
+                    </tr>
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>04:30AM</td>
+                        <td>06: 30PM</td>
+                        <td> 02 March 2025</td>
+                    </tr> -->
+                </table>
             </div>
         </div>
         <footer>
-            <a href="https://www.linkedin.com/in/abdulmoiz34/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/abdulmoiz34/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://github.com/AbdulMoiz34" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="mailto:moiz05366@gmail.com"><i class="fa-regular fa-envelope" target="_blank"></i></a>
         </footer>
