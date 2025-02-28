@@ -3,6 +3,8 @@ let intervalId;
 const expectedDateContainer = document.querySelector(".expected-date");
 const showTimeContainer = document.querySelector(".remaining-time-container");
 function onClickHandler() {
+    const audio = document.getElementById("bg-audio");
+    audio.play();
     expectedDateContainer.style.display = "none";
     showTimeContainer.style.display = "block";
     date = event.target.textContent + "2025";

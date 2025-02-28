@@ -311,6 +311,12 @@ table :is(th, td) {
     background-color: #0000009b;
 }
 
+.clock>p:first-child {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
 /* for small-screen */
 @media only screen and (max-width: 550px) {
     .clock {
@@ -328,5 +334,9 @@ table :is(th, td) {
 
     .back-btn {
         flex-direction: column;
+    }
+
+    .calender>h1 {
+        font-size: 25px;
     }
 }
